@@ -7,6 +7,10 @@ from .serializers import WomenSerializer
 from django.forms import model_to_dict
 
 
+class WomenAPIList(generics.ListCreateAPIView):
+    queryset = Women.objects.all()
+    serializer_class = WomenSerializer
+
 class WomenAPIView(APIView):
     def get(self, request):
         lst = Women.objects.all().values()
