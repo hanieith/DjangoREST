@@ -13,7 +13,7 @@ from rest_framework.parsers import JSONParser
 class WomenSerializer(serializers.ModelSerializer):
     class Meta:
         model = Women
-        field = ("__all__")
+        fields = ("__all__")
 
 
 
